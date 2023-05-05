@@ -9,7 +9,7 @@ selected = '主页'
 # 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("", ['主页','景区列表', '关于'], 
-        icons=['house','list', 'about'], menu_icon="cast", default_index=0)
+        icons=['house','list', 'info-square'], menu_icon="cast", default_index=0)
 
 # 在页面上显示横幅
 st.markdown("""
