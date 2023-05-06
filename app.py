@@ -41,7 +41,22 @@ with st.sidebar:
 if selected == '主页':
     st.write('主页')
 elif selected == '景区列表':
-    st.write('列表')
+    # 创建一个包含图片、文字和小标题的列表
+    with st.beta_container():
+        with st.beta_columns([1, 4]):
+            with st.beta_container():
+                st.image("https://picsum.photos/100", width=100)
+            with st.beta_container():
+                st.subheader("这是一个小标题")
+                st.write("这是一些文字。")
+
+        with st.beta_columns([1, 4]):
+            with st.beta_container():
+                st.image("https://picsum.photos/100", width=100)
+            with st.beta_container():
+                st.subheader("这是另一个小标题")
+                st.write("这是一些其他的文字。")
+
 elif selected =='关于':
     st.write('关于')
 
