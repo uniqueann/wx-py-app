@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # 设置页面标题和横幅
-st.set_page_config(page_title='沽酒渔歌-首页', page_icon=':canoe:', layout='centered', initial_sidebar_state='expanded')
+st.set_page_config(page_title='沽酒渔歌-首页', page_icon=':canoe:', layout='centered', initial_sidebar_state='collapsed')
 
 selected = '主页'
 
@@ -48,7 +48,7 @@ elif selected == '景区列表':
         columns = st.columns([1, 4], gap='small')
         with columns[0]:
             with st.container():
-                st.image("https://picsum.photos/100", width=100, use_column_width=True)
+                st.image("https://picsum.photos/100", width=30, use_column_width=True)
         with columns[1]:
             with st.container():
                 st.markdown("""<h5>这是一个小标题</h5>
@@ -62,7 +62,7 @@ elif selected == '景区列表':
         columns = st.columns([1, 4], gap='small')
         with columns[0]:
             with st.container():
-                st.image("https://picsum.photos/100", width=100, use_column_width=True)
+                st.image("https://picsum.photos/100", width=30, use_column_width=True)
         with columns[1]:
             with st.container():
                 st.markdown("""<h5>这是一个小标题</h5>
