@@ -2,14 +2,14 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # 设置页面标题和横幅
-st.set_page_config(page_title='沽酒渔歌-首页', page_icon=':canoe:', layout='wide', initial_sidebar_state='expanded')
+st.set_page_config(page_title='沽酒渔歌-首页', page_icon=':canoe:', layout='centered', initial_sidebar_state='expanded')
 
 selected = '主页'
 
 # 1. as sidebar menu
 with st.sidebar:
     selected = option_menu("", ['主页','景区列表', '关于'], 
-        icons=['house','list', 'info-square'], menu_icon="cast", default_index=0)
+        icons=['house','list', 'info-square'], menu_icon="cast", default_index=1)
 
 # 在页面上显示横幅
 # st.markdown("""
@@ -42,20 +42,63 @@ if selected == '主页':
     st.write('主页')
 elif selected == '景区列表':
     # 创建一个包含图片、文字和小标题的列表
-    with st.beta_container():
-        with st.beta_columns([1, 4]):
-            with st.beta_container():
-                st.image("https://picsum.photos/100", width=100)
-            with st.beta_container():
-                st.subheader("这是一个小标题")
-                st.write("这是一些文字。")
+    # container = st.container()
+    
+    with st.container():
+        columns = st.columns([1, 4], gap='small')
+        with columns[0]:
+            with st.container():
+                st.image("https://picsum.photos/100", width=100, use_column_width=True)
+        with columns[1]:
+            with st.container():
+                st.markdown("""<h5>这是一个小标题</h5>
+                <span>这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字</span>""", unsafe_allow_html=True)
 
-        with st.beta_columns([1, 4]):
-            with st.beta_container():
-                st.image("https://picsum.photos/100", width=100)
-            with st.beta_container():
-                st.subheader("这是另一个小标题")
-                st.write("这是一些其他的文字。")
+    with st.container():
+        columns = st.columns([1, 4], gap='small')
+        with columns[0]:
+            with st.container():
+                st.image("https://picsum.photos/100", width=100, use_column_width=True)
+        with columns[1]:
+            with st.container():
+                st.markdown("""<h5>这是一个小标题</h5>
+                <span>这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字</span>""", unsafe_allow_html=True)
+
+    with st.container():
+        columns = st.columns([1, 4], gap='small')
+        with columns[0]:
+            with st.container():
+                st.image("https://picsum.photos/100", width=100, use_column_width=True)
+        with columns[1]:
+            with st.container():
+                st.markdown("""<h5>这是一个小标题</h5>
+                <span>这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字</span>""", unsafe_allow_html=True)
+
+    with st.container():
+        columns = st.columns([1, 4], gap='small')
+        with columns[0]:
+            with st.container():
+                st.image("https://picsum.photos/100", width=100, use_column_width=True)
+        with columns[1]:
+            with st.container():
+                st.markdown("""<h5>这是一个小标题</h5>
+                <span>这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字
+                这是一些文字</span>""", unsafe_allow_html=True)
 
 elif selected =='关于':
     st.write('关于')
