@@ -12,28 +12,28 @@ with st.sidebar:
         icons=['house','list', 'info-square'], menu_icon="cast", default_index=0)
 
 # 在页面上显示横幅
-st.markdown("""
-<style>
-.banner {
-    display: flex;
-    align-items: center;
-    background-color: #f0f0f0;
-    color: white;
-    padding: 0.5rem;
-}
-.banner img {
-    margin-right: 1rem;
-}
-.banner h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-</style>
-<div class="banner">
-<img src="/assets/images/logo.png" alt="Logo" width="100">
-<h1>尽情沽酒渔歌！</h1>
-</div>
-""", unsafe_allow_html=True)
+# st.markdown("""
+# <style>
+# .banner {
+#     display: flex;
+#     align-items: center;
+#     background-color: #f0f0f0;
+#     color: white;
+#     padding: 0.5rem;
+# }
+# .banner img {
+#     margin-right: 1rem;
+# }
+# .banner h1 {
+#     margin: 0;
+#     font-size: 2rem;
+# }
+# </style>
+# <div class="banner">
+# <img src="/assets/images/logo.png" alt="Logo" width="100">
+# <h1>尽情沽酒渔歌！</h1>
+# </div>
+# """, unsafe_allow_html=True)
 
 # 在页面上显示其他内容
 # st.write('这是一个示例 Streamlit 应用程序。')
